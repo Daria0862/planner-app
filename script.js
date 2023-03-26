@@ -14,3 +14,10 @@ const currentDate = moment().format("dddd, MMMM Do");
 
 $("currentDay").text(currentDate);
 
+const container = $(".container");
+hours.forEach(function(hour) {
+    const row = $("<div>").addClass("row time-block");
+const hourCol = $("<div>").addClass("col-md-1 hour");
+const hourText = $("<p>").text(hour.hour + hour.meridiem);
+hourCol.append(hourText);
+})
