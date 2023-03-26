@@ -8,4 +8,9 @@ const hours = [
     {hour: "15", meridiem: "00"},
     {hour: "16", meridiem: "00"},
     {hour: "17", meridiem: "00"},
-]
+];
+
+const currentDate = moment().format("dddd, MMMM Do");
+
+$("currentDay").text(currentDate);
+
