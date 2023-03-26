@@ -20,4 +20,14 @@ hours.forEach(function(hour) {
 const hourCol = $("<div>").addClass("col-md-1 hour");
 const hourText = $("<p>").text(hour.hour + hour.meridiem);
 hourCol.append(hourText);
+
+const descriptionCol = $("<div>").addClass("col-md-10 description");
+const descriptionTextarea = $("<textarea>");
+descriptionCol.append(descriptionTextarea);
+
+const savedEvent = localStorage.getItem(hour.hour + hour.meridiem);
+if (savedEvent) {
+    descriptionTextarea.val(savedEvent);
+}
+
 })
